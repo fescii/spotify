@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Music Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">Spotify Music Analysis</h1>
+            <p class="text-gray-600">Analyze and visualize your music preferences</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-4">Mood Selection</h2>
+                <div class="select-wrapper">
+                    <select id="mood-selection" class="w-full p-2 border rounded">
+                        <option value="happy">Happy</option>
+                        <option value="sad">Sad</option>
+                        <option value="energetic">Energetic</option>
+                        <option value="chill">Chill</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-4">Visualization Type</h2>
+                <div class="select-wrapper">
+                    <select id="visualization-type" class="w-full p-2 border rounded">
+                        <option value="audioFeatures">Audio Features</option>
+                        <option value="genreDistribution">Genre Distribution</option>
+                        <option value="topSongs">Top Songs</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-4">Sorting Method</h2>
+                <div class="select-wrapper">
+                    <select id="sorting-method" class="w-full p-2 border rounded">
+                        <option value="popularity">Popularity (Bubble Sort)</option>
+                        <option value="energy">Energy (Quick Sort)</option>
+                        <option value="danceability">Danceability (Merge Sort)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-4">Analysis Results</h2>
+                <div id="analysis-results" class="h-96">
+                    <canvas></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-4">Track List</h2>
+                <div id="trackList" class="space-y-4">
+                    <!-- Tracks will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Updated script path -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
